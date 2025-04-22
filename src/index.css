@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@600;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+
+
+/* 🔹 RGB Border Animation for profile picture */
+@keyframes borderAnimation {
+  0%   { box-shadow: 0 0 15px 6px rgba(255, 0, 0, 1); }    /* Red */
+  25%  { box-shadow: 0 0 20px 8px rgba(0, 255, 0, 1); }    /* Green */
+  50%  { box-shadow: 0 0 25px 10px rgba(0, 0, 255, 1); }   /* Blue */
+  75%  { box-shadow: 0 0 20px 8px rgba(255, 0, 255, 1); }  /* Purple */
+  100% { box-shadow: 0 0 15px 6px rgba(255, 0, 0, 1); }    /* Back to Red */
+}
+
+/* animation for pong effect */
+@keyframes bounce-ping {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+
+/* 🔹 Custom Scrollbar for course history cards*/
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 60s linear infinite;
+}
+
+@keyframes fade-in-left {
+  from {
+    opacity: 0;
+    transform: translateX(-40px); /* Move in from the LEFT */
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-fade-in-left {
+  animation: fade-in-left 0.8s ease forwards;
+}
